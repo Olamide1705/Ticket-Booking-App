@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+@import "tailwindcss";
+
+body {
+  .bg-image {
+    background-image: "url('/images/Subtract.png')";
+  }
+  .font-Road {
+    font-family: "Road Rage";
+  }
+  .font-Roboto {
+    font-family: "Roboto";
+  }
+
+  .font-orbitron {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .font-monoton {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .font-mochi {
+    font-family: "Mochiy Pop One", sans-serif;
+  }
+
+  .radial {
+    background-image: "radial-gradient(ellipse at top, var(--tw-gradient-stops))";
+  }
+}
