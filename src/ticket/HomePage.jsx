@@ -13,7 +13,7 @@ const HomePage = () => {
     <div className="bg-cover md:bg-center w-full min-h-screen" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
       <NavBar />
       <div className="flex flex-col items-center gap-y-[8px] md:gap-y-[2px] pt-[130px] md:pt-[40px] md:pl-[230px]">
-       <h1 className="font-monoton text-[53px] md:text-[62px] text-[rgb(250,250,250)] text-center leading-[140%]">
+       <h1 className="font-monoton text-[51px] md:text-[62px] text-[rgb(250,250,250)] text-center leading-[140%]">
           TECHEMBER FEST{" "}
           <span className="font-orbitron text-[50px] text-center md:text-[62px]">
             ”25
@@ -36,11 +36,11 @@ const HomePage = () => {
         </p>
 
         <button
-          className="cursor-pointer w-full max-w-[100px] md:max-w-[150px] min-h-[44px] md:min-h-[48px] border border-[rgb(36,160,181)] hover:bg-[rgb(1,29,34)] hover:text-white rounded-[8px] text-[16px] md:text-[18px] text-[rgb(36,160,181)]"
+          className="cursor-pointer w-full max-w-[100px] md:max-w-[150px] min-h-[44px] md:min-h-[48px] border border-[rgb(36,160,181)] bg-white hover:bg-[rgb(1,29,34)] hover:text-white active:bg-[(1,29,34)] active:text-white rounded-[8px] text-[rgb(36,160,181)]"
           onClick={registerButton}
           type="button"
         >
-          <i className="fa-solid fa-angle-right"></i>
+          <i className="fa-solid fa-angle-right text-[20x] md:text-[24px] "></i>
         </button>
       </div>
       </div>

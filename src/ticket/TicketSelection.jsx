@@ -29,7 +29,7 @@ const TicketSelection = ({ selectedTicket, setSelectedTicket, ticketCount, setTi
         <div className="bg-[rgb(8,37,43)] border border-[rgb(14,70,79)] rounded-[32px] p-4 md:p-6 space-y-6">
           <div className="bg-radial from-[rgba(10,12,17,0.1)] via-[rgba(36,160,181,0.2)] to-[rgba(36,160,181,0)] border border-[rgba(7,55,63,1)] rounded-[24px] bg-opacity-50 p-[24px]">
             <div className="flex flex-col items-center justify-center space-y-2 pb-[10px]">
-              <h1 className="font-Road text-[48px] text-center md:text-[62px] text-[rgb(250,250,250)] leading-none">
+              <h1 className="font-Road text-[45px] text-center md:text-[62px] text-[rgb(250,250,250)] leading-none">
                 Techember Fest ”25
               </h1>
               <p className="font-Roboto text-[14px] md:text-[16px] text-[rgb(250,250,250)] max-w-[460px] text-center">
