@@ -72,7 +72,7 @@ const FormValidation = ({
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validate()) return;
+    if (!validate()) return; 
     setIsLoading(true);
 
     const ticketId = `TICKET-${Date.now()}`;
@@ -108,16 +108,27 @@ const FormValidation = ({
         <p className="font-Roboto text-[16px] text-white pb-[20px] md:pb-[35px] ">
           Upload Profile Picture
         </p>
-        <div className="md:relative flex items-center justify-center rounded-[20px] md:rounded-none w-full min-h-[260px] md:min-h-[200px] bg-[rgba(0,0,0,0.2)]">
-          <ImageUploader
+
+        <div className="block md:hidden">
+        <ImageUploader
+          passportImage={passportImage}
+          setPassportImage={setPassportImage}
+          passportError={errors.passportImage}
+        />
+      </div>
+      
+        <div className=" hidden md:flex md:relative items-center justify-center rounded-[20px] md:rounded-none w-full min-h-[260px] md:min-h-[200px] bg-[rgba(0,0,0,0.2)]">
+         <div className=" flex items-center justify-center block">
+        <ImageUploader
             passportImage={passportImage}
             setPassportImage={setPassportImage}
             passportError={errors.passportImage}
           />
-        </div>
+          </div>
+          </div>
       </div>
 
-      <div className="bg-[rgb(7,55,63)] h-1 w-full rounded mb-[40px]"></div>
+     <div className="bg-[rgb(7,55,63)] h-1 w-full rounded mb-[40px]"></div>
 
       <form className="space-y-[25px] md:space-y-[30px] " onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-2">

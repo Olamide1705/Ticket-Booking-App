@@ -1,10 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import ticz from "../assets/ticz.png";
 import div from "../assets/div.png";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+   const MyTicketButton = () => {
+     navigate("*")
+   }
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  
 
   return (
     <div className="p-[40px] ">
@@ -34,7 +40,11 @@ const NavBar = () => {
             </div>
 
             <div className="hidden md:block">
-              <button className="w-[169px] flex items-center justify-center gap-x-1 bg-white hover:bg-[rgb(36,160,181)] text-black hover:text-white border border-[rgba(213,234,0,0.1)] h-[48px] py-2 px-4 rounded-xl text-[16px] font-serif">
+              <button className="w-[169px] flex items-center justify-center gap-x-1 bg-white hover:bg-[rgb(36,160,181)] text-black hover:text-white border border-[rgba(213,234,0,0.1)] h-[48px] py-2 px-4 rounded-xl text-[16px] font-serif"
+              onClick={MyTicketButton}
+              type="button"
+              >
+                        
                 MY TICKETS
                 <img src={div} alt="" />
               </button>
@@ -99,13 +109,16 @@ const NavBar = () => {
           </a>
           <a
             href="*"
-            onClick={() => setSidebarOpen(false)}
+            onClick={() => setSidebarOpen(false)} 
             className="block hover:text-gray-300"
           >
             About Project
           </a>
           <button
-            onClick={() => setSidebarOpen(false)}
+            onClick={() => {setSidebarOpen(false);
+               MyTicketButton()}}
+               type="button"
+            
             className="mt-6 w-full bg-white hover:bg-[rgb(36,160,181)] text-black hover:text-white border border-[rgba(213,234,0,0.1)] h-[48px] rounded-xl text-[16px] font-serif"
           >
             MY TICKETS
