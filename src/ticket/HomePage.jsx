@@ -10,9 +10,8 @@ const HomePage = () => {
   };
   return (
     <>
-    <div className="bg-cover md:bg-center w-full min-h-screen" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
-      <NavBar />
-      <div className="flex flex-col items-center gap-y-[8px] md:gap-y-[2px] pt-[130px] md:pt-[40px] md:pl-[230px]">
+    <div className="bg-cover md:bg-center w-full min-h-screen place-content-center" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
+       <div className="flex flex-col items-center gap-y-[8px] md:gap-y-[2px] md:pl-[230px]">
        <h1 className="font-monoton text-[51px] md:text-[62px] text-[rgb(250,250,250)] text-center leading-[140%]">
           TECHEMBER FEST{" "}
           <span className="font-orbitron text-[50px] text-center md:text-[62px]">
