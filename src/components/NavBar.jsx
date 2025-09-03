@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import ticz from "../assets/ticz.png";
 import div from "../assets/div.png";
 
 const NavBar = () => {
-  const navigate = useNavigate();
-   const MyTicketButton = () => {
-     navigate("*")
-   }
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  
+    const [sidebarOpen, setSidebarOpen] = useState(false);
   
 
   return (
@@ -28,26 +25,25 @@ const NavBar = () => {
             </div>
 
             <div className="hidden md:flex flex-row items-center gap-5 text-[16px] font-serif text-center">
-              <a className="text-white hover:text-gray-300" href="/">
+              <Link to="/" className="text-white hover:text-gray-300">
                 Events
-              </a>
-              <a className="text-gray-400 hover:text-white" href="*">
+              </Link>
+              <Link to="/mytickets" className="text-gray-400 hover:text-white">
                 My Tickets
-              </a>
-              <a className="text-gray-400 hover:text-white" href="*">
+              </Link>
+              <Link to="/about" className="text-gray-400 hover:text-white">
                 About Project
-              </a>
+              </Link>
             </div>
 
             <div className="hidden md:block">
-              <button className="w-[169px] flex items-center justify-center gap-x-1 bg-white hover:bg-[rgb(36,160,181)] text-black hover:text-white border border-[rgba(213,234,0,0.1)] h-[48px] py-2 px-4 rounded-xl text-[16px] font-serif"
-              onClick={MyTicketButton}
-              type="button"
+              <Link to="my-tickets" className="w-[169px] flex items-center justify-center gap-x-1 bg-white hover:bg-[rgb(36,160,181)] text-black hover:text-white border border-[rgba(213,234,0,0.1)] h-[48px] py-2 px-4 rounded-xl text-[16px] font-serif"
+             
               >
                         
                 MY TICKETS
                 <img src={div} alt="" />
-              </button>
+              </Link>
             </div>
 
             <div className="md:hidden flex items-center justify-between w-full">
@@ -93,36 +89,32 @@ const NavBar = () => {
         </button>
 
         <nav className="space-y-4 text-md font-serif">
-          <a
-            href="/"
+          <Link
+            to="/"
             onClick={() => setSidebarOpen(false)}
             className="block hover:text-gray-300"
           >
             Events
-          </a>
-          <a
-            href="*"
+          </Link>
+          <Link
+            to="/mytickets"
             onClick={() => setSidebarOpen(false)}
             className="block hover:text-gray-300"
           >
             My Tickets
-          </a>
-          <a
-            href="*"
+          </Link>
+          <Link
+            to="/about"
             onClick={() => setSidebarOpen(false)} 
             className="block hover:text-gray-300"
           >
             About Project
-          </a>
-          <button
-            onClick={() => {setSidebarOpen(false);
-               MyTicketButton()}}
-               type="button"
-            
-            className="mt-6 w-full bg-white hover:bg-[rgb(36,160,181)] text-black hover:text-white border border-[rgba(213,234,0,0.1)] h-[48px] rounded-xl text-[16px] font-serif"
+          </Link>
+          <Link to="/my-tickets"
+              className="mt-6 w-full bg-white hover:bg-[rgb(36,160,181)] text-black hover:text-white border border-[rgba(213,234,0,0.1)] h-[48px] rounded-xl text-[16px] font-serif"
           >
             MY TICKETS
-          </button>
+          </Link>
         </nav>
       </aside>
     </div>
